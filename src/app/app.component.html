@@ -1,0 +1,16 @@
+<section class="col-md-12 d-flex">
+<aside>
+    <app-form-filler
+    (onChangeEmitter)="onSaveInfo($event)"
+    [updateUser]="updateUser"
+    ></app-form-filler>
+</aside>
+<aside>
+    <app-data-renderer
+    [userInfo]="userInfo"
+    (onUpdateEmitter)="onUpdate($event)"
+    ></app-data-renderer>
+</aside>
+
+
+</section>

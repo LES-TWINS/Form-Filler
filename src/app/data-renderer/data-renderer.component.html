@@ -1,0 +1,23 @@
+<section class="col-md-12">
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Firstname</th>
+                <th scope="col">Lastname</th>
+                <th scope="col">Age</th>
+                <th scope="col">Delete</th>
+                <th scope="col">Update</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let user of userInfo let i = index" [ngClass]="user.age >= 18 ? 'over': 'under' ">
+                <td>{{user.userName}}</td>
+                <td>{{user.lastName}}</td>
+                <td>{{user.age}}</td>
+                <td><button (click)="onBtnDelete(i)" class="btn btn-danger">Delete</button></td>
+                <td><button (click)="onBtnUpdate(i,user)" class="btn btn-warning">Update</button></td>
+
+            </tr>
+        </tbody>
+    </table>
+</section>
